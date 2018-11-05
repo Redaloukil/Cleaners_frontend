@@ -3,7 +3,7 @@ import _superagent from 'superagent';
 
 const superagent = superagentPromise(_superagent, global.Promise);
 
-const API_ROOT = 'http://localhost:8000';
+const API_ROOT = 'http://localhost:8000/';
 
 const encode = encodeURIComponent;
 const responseBody = res => res.body;
@@ -15,7 +15,7 @@ const tokenPlugin = req => {
   }
 }
 
-const requests = {
+export const requests = {
     del: url =>
       superagent.del(`${API_ROOT}${url}`).use(tokenPlugin).then(responseBody),
     get: url =>
@@ -27,13 +27,24 @@ const requests = {
   };
 
 
-const users = {
-    getUsers : url =>
-        requests.get(url),
-    getUser :(url) => 
-        requests.get(url),
-    login : (url , body ) => 
-        requests.post(url , body),
-    signup : (url , body ) => 
-        requests.post(url , body),
+export const users = {
+    getUsers : () =>
+        requests.get('users/users/'),
+    getUser :() => 
+        requests.get('users/users/1'),
+    current : () => 
+        requests.get('users/user/'),
+    login : (username , password) => 
+        requests.post(url , {user :{username : username , password : password}}),
+    signup : (username , email , phone_number , password ) => 
+        requests.post(url , {user:{username : username , email:email , phone_number:phone_number, password:password }}),
 }
+
+export const accounts = {
+    
+}
+export const orders = {
+
+}
+
+
