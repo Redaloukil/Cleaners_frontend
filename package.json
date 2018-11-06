@@ -12,7 +12,8 @@
     "react-scripts": "2.1.1",
     "redux": "^4.0.1",
     "superagent": "^4.0.0-beta.5",
-    "superagent-promise": "^1.1.0"
+    "superagent-promise": "^1.1.0",
+    "validator": "^10.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
