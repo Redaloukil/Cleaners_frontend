@@ -1,5 +1,6 @@
 import React from 'react';
-import { isEmail , isMobilePhone } from 'validator'
+import { isEmail , isMobilePhone } from 'validator';
+import { Link } from 'react-router-dom';
 
 
 class Signup extends React.Component {

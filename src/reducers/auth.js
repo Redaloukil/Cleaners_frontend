@@ -1,12 +1,12 @@
 import {
-    USER_LOGGED_IN , 
-    USER_LOGGED_OUT , 
-    USER_SIGNED_IN ,
-} from '../types/users';
+    CREATE_USER_REQUEST , 
+    FETCH_CURRENT_USER_REQUEST , 
+    FETCH_CURRENT_USER_SUCCESS , 
+} from '../types/auth';
 
-const users = (state = {} , action) => {
+const auth = (state = {} , action) => {
     switch(action.type){
-        case(USER_LOGGED_IN):
+        case():
             return 0;
         case(USER_SIGNED_IN):
             return 0;
@@ -17,4 +17,4 @@ const users = (state = {} , action) => {
     }
 } 
 
-export default users;
+export default auth;

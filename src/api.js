@@ -35,13 +35,16 @@ export const users = {
     current : () => 
         requests.get('users/user/'),
     login : (username , password) => 
-        requests.post(url , {user :{username : username , password : password}}),
+        requests.post('users/login/' , {username : username , password : password}),
     signup : (username , email , phone_number , password ) => 
-        requests.post(url , {user:{username : username , email:email , phone_number:phone_number, password:password }}),
+        requests.post('users/users/' , {user:{username : username , email:email , phone_number:phone_number, password:password }}),
 }
 
 export const accounts = {
-    
+    getClients : () => 
+      requests.get('accounts/clients/'),
+    getAgents : () => 
+      requests.get('accounts/clients/'),
 }
 export const orders = {
 
