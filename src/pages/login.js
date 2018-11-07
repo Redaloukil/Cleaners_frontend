@@ -48,6 +48,7 @@ class Login extends React.Component {
         const {data , errors , loading } = this.state
         return(
             <form onSubmit={this.onSubmit}>
+                <h1>Hello Login</h1>
                 <div className="form-group">
                     <label htmlFor="username">Email</label>
                     <input

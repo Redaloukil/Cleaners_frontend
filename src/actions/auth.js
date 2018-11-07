@@ -1,31 +1,25 @@
-import { USER_SIGNED_IN , USER_LOGGED_OUT , USER_LOGGED_IN } from '../types/users';
-import { users } from '../../api';
-import setAuthentificationHeader from ''
-
-
-const userLoggedIn = (user) => ({
-    type : USER_LOGGED_IN, 
-    user,
-})
-
-const userLoggedOut = () => ({
-    type:USER_LOGGED_OUT
-})
-
-
-
-export const login = (username , password ) => {
-    const user = login(username , password)
-    if(user.token){
-        localStorage.trndy = user.token
-        dispatch(userLoggedIn({...user , loaded:true})) 
-    }
-}
-
-export const signup = () => {
-    //Signup call came here
-}
-
-const logout = () => {
-    //Logout call came here 
-}
+import {
+    CREATE_USER_REQUEST,
+    CREATE_USER_FAILURE,
+    FETCH_CURRENT_USER_REQUEST,
+    FETCH_CURRENT_USER_SUCCESS
+  } from '../types/auth';
+  
+  export const createUserRequest = user => ({
+    type: CREATE_USER_REQUEST,
+    user
+  });
+  
+  export const createUserFailure = errors => ({
+    type: CREATE_USER_FAILURE,
+    errors
+  });
+  
+  export const fetchCurrentUserRequest = () => ({
+    type: FETCH_CURRENT_USER_REQUEST
+  });
+  
+  export const fetchCurrentUserSuccess = user => ({
+    type: FETCH_CURRENT_USER_SUCCESS,
+    user
+  });

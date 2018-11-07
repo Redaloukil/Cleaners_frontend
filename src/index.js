@@ -6,9 +6,17 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import {createBrowserHistory} from 'history';
 import store from './store';
+import setAuthentificationHeader from './setAuthentificationHeader';
+import { fetchCurrentUserRequest , fetchCurrentUserSuccess } from './actions/auth';
 
 
-
+if(localStorage.trndy) {
+    setAuthentificationHeader(localStorage.trndy);
+    store.dispatch(fetchCurrentUserRequest());
+} else {
+    store.dispatch(fetchCurrentUserSuccess({}));
+}
+  
 ReactDOM.render(
     <BrowserRouter history={createBrowserHistory}>
         <Provider store={store}>

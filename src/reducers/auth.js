@@ -1,20 +1,16 @@
 import {
-    CREATE_USER_REQUEST , 
-    FETCH_CURRENT_USER_REQUEST , 
-    FETCH_CURRENT_USER_SUCCESS , 
-} from '../types/auth';
-
-const auth = (state = {} , action) => {
-    switch(action.type){
-        case():
-            return 0;
-        case(USER_SIGNED_IN):
-            return 0;
-        case(USER_LOGGED_OUT):
-            return 0;
-        default :
-            return state
+    USER_LOGGED_IN,
+    USER_LOGGED_OUT,
+    
+} from "../types/users";
+  
+export default function user(state = { loaded: false }, action = {}) {
+    switch (action.type) {
+      case USER_LOGGED_IN:
+        return { ...action.user, loaded: true };
+    case USER_LOGGED_OUT:
+        return { loaded: true };
+      default:
+        return state;
     }
-} 
-
-export default auth;
+}

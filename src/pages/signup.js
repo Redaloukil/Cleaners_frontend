@@ -43,6 +43,7 @@ class Signup extends React.Component {
         const {data , errors , loading } = this.state
         return(
             <form onSubmit={this.onSubmit}>
+                <h1>Hello Signup</h1>
                 <div className="form-group">
                     <label htmlFor="email">Email</label>
                     <input

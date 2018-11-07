@@ -7,11 +7,11 @@ import {
 const users = (state = {} , action) => {
     switch(action.type){
         case(USER_LOGGED_IN):
-            return 0;
+            return state;
         case(USER_SIGNED_IN):
-            return 0;
+            return state;
         case(USER_LOGGED_OUT):
-            return 0;
+            return state;
         default :
             return state
     }
