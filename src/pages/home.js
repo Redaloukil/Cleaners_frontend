@@ -4,7 +4,7 @@ import HomeNavbar from '../components/navs/HomeNavbar';
 const Home = () => {
     return(
         <header className="">
-            <HomeNavbar/>
+            
         </header>
     )
 }

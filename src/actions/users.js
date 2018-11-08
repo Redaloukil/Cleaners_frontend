@@ -3,8 +3,8 @@ import {
     USER_LOGGED_OUT , 
     USER_LOGGED_IN 
 } from '../types/users';
-import { users } from '../../api';
-import setAuthentificationHeader from ''
+import { users } from '../api';
+import setAuthentificationHeader from '../setAuthentificationHeader';
 
 
 const userSignedIn = (user) => ({
@@ -24,17 +24,17 @@ const userLoggedOut = () => ({
 
 
 export const login = (username , password ) => dispatch => {
-    const user = login(username , password)
+    const user = users.login(username , password)
     if(user.token){
         localStorage.trndy = user.token
         dispatch(userLoggedIn({...user , loaded:true})) 
     }
 }
 
-export const signup = (username , email , phone_number , password ) => {
+export const signup = (username , email , phone_number , password ) => dispatch => {
     const user = signup(username , email , phone_number , password)
     if(user.token) {
-        localStoragetrndy = user.token
+        localStorage.trndy = user.token
         dispatch(userSignedIn({...user , loaded:true }))
     }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import {users} from '../api';
 import { isEmail , isMobilePhone} from 'validator';
 import { Link } from 'react-router-dom';
+import { login } from '../actions/users';
 
 class Login extends React.Component {
     state = {
@@ -25,7 +26,8 @@ class Login extends React.Component {
         this.setState({ errors });
         if (Object.keys(errors).length === 0) {
           this.setState({ loading: true });
-          this.props.submit(this.state.data);
+            
+          login(this.state.data.username , this.state.data.password)
         }
       };
     
@@ -36,19 +38,12 @@ class Login extends React.Component {
         
         return errors;
     };  
-    onSubmit = ()=> {
-        users.signup(
-            {
-            username : this.state.data.username , 
-            password : this.state.data.password, 
-             
-            })
-    }
+    
     render(){
         const {data , errors , loading } = this.state
         return(
             <form onSubmit={this.onSubmit}>
-                <h1>Hello Login</h1>
+                
                 <div className="form-group">
                     <label htmlFor="username">Email</label>
                     <input

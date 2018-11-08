@@ -11,19 +11,44 @@ import UserRoute from './components/routes/UserRoute';
 
 
 
+
 class App extends Component {
+  componentWillMount(){
+
+  }
   render() {
+    const {isAutheticated , location } = this.props
     return (
       <div>
-        <Route exact path="/" exact component={Home}/>
-        <GuestRoute exact path="/login" component={Login}/>
-        <GuestRoute exact path="/signup" component={Signup}/>
-        
+        <Route 
+        location={location} 
+        exact path="/" 
+        component={Home}
+        />
+        <GuestRoute
+        location={location}
+        path="/login"
+        exact
+        component={Login}
+        />
+        <GuestRoute
+        location={location}
+        path="/signup"
+        exact
+        component={Signup}
+        />
       </div>
     )
   }
 }
 
+function mapStateToProps(state){
+    return {
+      isAutheticated :!!state.user.email,
+      
+    }
+    
 
+}
 
-export default App;
+export default connect()(App);
