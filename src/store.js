@@ -6,9 +6,9 @@ import createSagaMiddleware from "redux-saga";
 
 const sagaMiddleware = createSagaMiddleware();
 
-const rootReducer = combineReducers(
+const rootReducer = combineReducers({
     users,
-)
+})
 
 const store = createStore(
     rootReducer,

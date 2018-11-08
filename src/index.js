@@ -8,6 +8,7 @@ import {createBrowserHistory} from 'history';
 import store from './store';
 import setAuthentificationHeader from './setAuthentificationHeader';
 import { fetchCurrentUserRequest , fetchCurrentUserSuccess } from './actions/auth';
+import { users } from './api';
 
 
 if(localStorage.trndy) {
@@ -17,6 +18,10 @@ if(localStorage.trndy) {
     store.dispatch(fetchCurrentUserSuccess({}));
 }
   
+
+
+console.log(call)
+console.log(localStorage.trndy)
 ReactDOM.render(
     <BrowserRouter history={createBrowserHistory}>
         <Provider store={store}>
