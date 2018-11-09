@@ -25,9 +25,11 @@ const userLoggedOut = () => ({
 
 export const login = (username , password ) => dispatch => {
     const user = users.login(username , password)
+    console.log(user)
     if(user.token){
         localStorage.trndy = user.token
         dispatch(userLoggedIn({...user , loaded:true})) 
+        
     }
 }
 

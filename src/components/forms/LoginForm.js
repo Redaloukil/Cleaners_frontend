@@ -1,10 +1,14 @@
 import React from 'react';
-import {users} from '../api';
-import { isEmail , isMobilePhone} from 'validator';
+import {users} from '../../api';
+import { isEmail } from 'validator';
 import { Link } from 'react-router-dom';
-import { login } from '../actions/users';
+import { login } from '../../actions/users';
+import { Redirect } from 'react-router-dom';
 
-class Login extends React.Component {
+class LoginForm extends React.Component {
+    constructor(props){
+        super(props)
+    }
     state = {
         data : {
             username : '',
@@ -25,15 +29,15 @@ class Login extends React.Component {
         const errors = this.validate(this.state.data);
         this.setState({ errors });
         if (Object.keys(errors).length === 0) {
-          this.setState({ loading: true });
+            this.setState({ loading: true });
+            this.props.submit(this.state.data.username , this.state.data.password)
             
-          login(this.state.data.username , this.state.data.password)
         }
       };
     
     validate = data => {
         const errors = {};
-        if (!isMobilePhone(data.phone_number)) errors.phone_number = "Invalid phone number";
+        if (!(data.username)) errors.username = "Invalid phone number";
         if (!data.password) errors.password = "Can't be blank";
         
         return errors;
@@ -45,18 +49,18 @@ class Login extends React.Component {
             <form onSubmit={this.onSubmit}>
                 
                 <div className="form-group">
-                    <label htmlFor="username">Email</label>
+                    <label htmlFor="username">Phone number</label>
                     <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={data.email}
+                        type="text"
+                        id="username"
+                        name="username"
+                        value={data.username}
                         onChange={this.onChange}
                         className={
-                                errors.email ? "form-control is-invalid" : "form-control"
+                                errors.username ? "form-control is-invalid" : "form-control"
                         }
                     />
-                    <div className="invalid-feedback">{errors.email}</div>
+                    <div className="invalid-feedback">{errors.username}</div>
                 </div>
                 
                 
@@ -76,15 +80,12 @@ class Login extends React.Component {
                 </div>
                 
                 <button type="submit" className="btn btn-primary btn-block">
-                    Signup
+                    Login
                 </button>
-                <small className="form-text text-center">
-                        or <Link to="/login">Login</Link> if you have an account
-                </small>
             </form>
         )
     }
 }
 
 
-export default Login;
+export default LoginForm;

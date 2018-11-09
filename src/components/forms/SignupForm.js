@@ -1,10 +1,16 @@
 import React from 'react';
 import { isEmail , isMobilePhone } from 'validator';
 import { Link } from 'react-router-dom';
-import { login } from '../actions/users';
+import { login } from '../../actions/users';
 
 
-class Signup extends React.Component {
+class SignupForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.validate = this.validate.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+
     state = {
         data : {
             username : '',
@@ -125,4 +131,4 @@ class Signup extends React.Component {
     }
 }
 
-export default Signup;
+export default SignupForm;
