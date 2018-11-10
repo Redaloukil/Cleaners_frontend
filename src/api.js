@@ -37,7 +37,7 @@ export const users = {
     login : (username , password) => 
         requests.post('users/login/' , {username : username , password : password}),
     signup : (username , email , phone_number , password ) => 
-        requests.post('users/users/' , {user:{username : username , email:email , phone_number:phone_number, password:password }}),
+        requests.post('users/users/' , {username, email , phone_number,password }),
 }
 
 export const accounts = {

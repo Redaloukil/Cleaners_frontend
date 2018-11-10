@@ -1,7 +1,6 @@
 import React from 'react';
 import { isEmail , isMobilePhone } from 'validator';
 import { Link } from 'react-router-dom';
-import { login } from '../../actions/users';
 
 
 class SignupForm extends React.Component {
@@ -33,7 +32,7 @@ class SignupForm extends React.Component {
         this.setState({ errors });
         if (Object.keys(errors).length === 0) {
           this.setState({ loading: true });
-          login(this.state.data.email , this.state.data.phone_number , this.state.data.username ,this.state.data.password )
+          this.props.submit(this.state.data.email , this.state.data.phone_number , this.state.data.username ,this.state.data.password )
         }
       };
     

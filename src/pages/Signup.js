@@ -1,16 +1,20 @@
 import React from 'react';
 import SignupForm from '../components/forms/SignupForm';
-import { login } from '../actions/users';
+import { signup } from '../actions/users';
+import { connect } from 'react-redux';
 
-const Signup = () => {
-    this.submit = (username , password) => {
-        
+class Signup extends React.Component{
+    submit = (username , email , phone_number , password) => {
+        this.props.signup(username , email , phone_number , password)
     }
-    return(
-        <div>
-            <SignupForm submit={this.submit}/>
-        </div>
-    )
+    render(){
+        return(
+            <div>
+                {console.log(this.props)}
+                <SignupForm submit={this.submit}/>
+            </div>
+        )    
+    }
 }
 
-export default Signup;
+export default connect(null , {signup})(Signup);

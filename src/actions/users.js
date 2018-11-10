@@ -32,7 +32,7 @@ export const login = (username , password ) => dispatch => {
 }
 
 export const signup = (username , email , phone_number , password ) => dispatch => {
-    const user = signup(username , email , phone_number , password)
+    const user = users.signup(username , email , phone_number , password)
     if(user.token) {
         localStorage.trndy = user.token
         dispatch(userSignedIn({...user , loaded:true }))
