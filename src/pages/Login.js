@@ -1,17 +1,21 @@
 import React from 'react';
 import LoginForm from '../components/forms/LoginForm';
+import { connect } from 'react-redux';
+import { users } from '../api';
 import { login } from '../actions/users';
 
-const Login = () => {
-    function submit(username , password){
-        login(username , password)
-        
+class Login extends React.Component {
+    submit = (username , password) => {
+        this.props.login(username , password)
     }
-    return(
-        <div>
-            <LoginForm submit={submit}/>
-        </div>
-    )
+    render(){
+        return(
+            <div>
+                <LoginForm submit={this.submit}/>
+            </div>
+        )
+    }
+    
 }
 
-export default Login;
+export default connect(null , {login})(Login);
