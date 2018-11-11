@@ -22,29 +22,29 @@ class App extends Component {
       <div> 
         <Switch>
           <Route 
-          location={location} 
-          exact 
-          path="/" 
-          component={Home}
+            location={location} 
+            exact 
+            path="/" 
+            component={Home}
           />
           <GuestRoute
-          location={location}
-          exact
-          path="/login"
-          component={Login}
+            location={location}
+            exact
+            path="/login/"
+            component={Login}
           />
           <GuestRoute
-          location={location}
-          exact
-          path="/signup"
-          exact
-          component={Signup}
+            location={location}
+            
+            path="/signup/"
+            exact
+            component={Signup}
           />
           <GuestRoute
-          location={location}
-          exact
-          path="/dashbord"
-          component={Dashbord}
+            location={location}
+            path="/dashbord/"
+            exact
+            component={Dashbord}
           />
         </Switch>
       </div>
