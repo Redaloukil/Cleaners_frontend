@@ -4,8 +4,9 @@ import { signup } from '../actions/users';
 import { connect } from 'react-redux';
 
 class Signup extends React.Component{
-    submit = (username , email , phone_number , password) => {
-        this.props.signup(username , email , phone_number , password)
+    submit = (username, email , phone_number , password ) => {
+        this.props.signup(username, email ,phone_number, password)
+        
     }
     render(){
         return(

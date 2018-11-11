@@ -31,13 +31,13 @@ export const users = {
     getUsers : () =>
         requests.get('users/users/'),
     getUser :() => 
-        requests.get('users/users/1'),
+        requests.get('users/users/'),
     current : () => 
         requests.get('users/user/'),
     login : (username , password) => 
         requests.post('users/login/' , {username : username , password : password}),
     signup : (username , email , phone_number , password ) => 
-        requests.post('users/users/' , {username, email , phone_number,password }),
+        requests.post('users/signup/' , {username, email, phone_number, password}),
 }
 
 export const accounts = {

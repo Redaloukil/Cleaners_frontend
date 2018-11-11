@@ -14,9 +14,4 @@ class Dashbord extends React.Component {
     }
 }
 
-function mapStateToProps(state){
-    return {
-        
-    }
-}
 export default Dashbord;
