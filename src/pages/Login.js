@@ -5,12 +5,13 @@ import { users } from '../api';
 import { login } from '../actions/users';
 
 class Login extends React.Component {
-    submit = (username , password) => {
-        this.props.login(username , password)
+    submit = (username , password ) => {
+        this.props.history.push("/dashbord/")
     }
     render(){
         return(
             <div>
+                {console.log(this.props)}
                 <LoginForm submit={this.submit}/>
             </div>
         )

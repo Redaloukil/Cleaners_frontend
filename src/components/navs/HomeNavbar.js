@@ -34,7 +34,7 @@ const Homenavbar = () => {
                 </li>
                 </ul>
                 
-            </div>
+            </div> 
             </div>
         </nav>
     )
