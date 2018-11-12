@@ -6,7 +6,10 @@ const superagent = superagentPromise(_superagent, global.Promise);
 const API_ROOT = 'http://localhost:8000/';
 
 const encode = encodeURIComponent;
-const responseBody = (res) => { return res.body };
+const responseBody = (res) => { 
+  console.log(res.body)
+  return res.body 
+};
 
 let token = null;
 const tokenPlugin = req => {
@@ -43,8 +46,12 @@ export const users = {
 export const accounts = {
     getClients : () => 
       requests.get('accounts/clients/'),
+    getClient : (id) => 
+      requests.get('accounts/clients/'+id),
     getAgents : () => 
       requests.get('accounts/clients/'),
+    getAgent : () => 
+      requests.get()
 }
 
 
