@@ -12,7 +12,6 @@ class Login extends React.Component {
     render(){
         return(
             <div>
-                {console.log(this.props)}
                 <LoginForm submit={this.submit}/>
             </div>
         )
