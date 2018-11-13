@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import './App.css';
 import Home from './pages/home';
@@ -12,7 +12,7 @@ import UserRoute from './components/routes/UserRoute';
 
 
 
-class App extends Component {
+class App extends React.Component {
   componentWillMount(){
     
   }
@@ -20,6 +20,8 @@ class App extends Component {
     const { isAutheticated , location } = this.props
     return (
       <div> 
+        
+      
         <Switch>
           <Route 
             location={location} 
@@ -40,14 +42,15 @@ class App extends Component {
             exact
             component={Signup}
           />
-          <GuestRoute
+          <UserRoute
             location={location}
             path="/dashbord/"
             exact
             component={Dashbord}
           />
         </Switch>
-      </div>
+    </div>
+     
     )
   }
 }
@@ -61,4 +64,4 @@ function mapStateToProps(state){
 
 }
 
-export default connect()(App);
+export default App;

@@ -1,15 +1,18 @@
 import React from 'react'
-import { Route } from 'react-router-dom';
+import { Route , Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Login from '../../pages/Login';
 
 const UserRouter = ({isAuthenticated : isAuthenticated  , component:Component , ...rest}) => {
-    
+    return(
+        <Route
+            {...rest}
+            render={props =>
+            isAuthenticated ? <Component {...props} /> : <Redirect to="/" />
+            }
+        />
+    )    
 }
 
-function mapStateToProps(state){
-    return {
-            isAuthenticated : !!state.user.email
-        }
-}
-export default connect(null , mapStateToProps)(UserRouter);
+
+export default UserRouter;

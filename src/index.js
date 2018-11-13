@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
-import {createBrowserHistory} from 'history';
-import store from './store';
+import { BrowserRouter, Switch , Route } from 'react-router-dom';
+
+import {store} from './store';
 import setAuthentificationHeader from './setAuthentificationHeader';
 import { fetchCurrentUserRequest , fetchCurrentUserSuccess } from './actions/auth';
-
+import createHistory from 'history/createBrowserHistory';
 
 
 if(localStorage.trndy) {
@@ -19,12 +19,16 @@ if(localStorage.trndy) {
 }
   
 
+const history = createHistory();
+
 ReactDOM.render(
-    <BrowserRouter history={createBrowserHistory}>
-        <Provider store={store}>
-            <App/>
-        </Provider>
-    </BrowserRouter>
+    <Provider store={store}>
+        <BrowserRouter history={history}>
+            <Switch>
+                <Route path="/" component={App}/>
+            </Switch> 
+        </BrowserRouter>
+    </Provider>
     ,document.getElementById('root')
 );
 

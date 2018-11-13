@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
     users,
 })
 
-const store = createStore(
+export const store = createStore(
     rootReducer,
     applyMiddleware(sagaMiddleware, thunk),
 );
