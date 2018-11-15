@@ -20,8 +20,6 @@ class App extends React.Component {
     const { isAutheticated , location } = this.props
     return (
       <div> 
-        
-      
         <Switch>
           <Route 
             location={location} 

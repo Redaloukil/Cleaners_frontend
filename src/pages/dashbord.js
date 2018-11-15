@@ -1,5 +1,8 @@
 import React from 'react';
-import {  } from 'react-router-dom';
+import { Switch , Route } from 'react-router-dom';
+import UserRoute from '../components/routes/UserRoute';
+import Orders from './dashbord/Orders';
+import CreateOrders from '../pages/dashbord/CreateOrders';
 
 
 class Dashbord extends React.Component {
@@ -10,7 +13,10 @@ class Dashbord extends React.Component {
     render(){
         return (
             <div>
-                hello dashbord
+                <Switch>
+                    <UserRoute path="/orders" component={Orders}/>
+                    <UserRoute path="/create" component={CreateOrders}/>
+                </Switch>
             </div>
         )
     }
