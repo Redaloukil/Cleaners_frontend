@@ -1,6 +1,7 @@
 import React from 'react';
 import HomeNavbar from '../components/navs/HomeNavbar';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 const Home = () => {
     return(
@@ -13,5 +14,10 @@ const Home = () => {
         </header>
     )
 }
-
-export default Home;
+function mapStateToProps(state){
+    
+    return {
+        isAuthenticated : state.user.email
+    }
+}
+export default connect(null , mapStateToProps)(Home);

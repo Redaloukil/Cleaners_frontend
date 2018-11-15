@@ -7,6 +7,7 @@ import { login } from '../actions/users';
 class Login extends React.Component {
     submit = (username , password ) => {
         this.props.login(username , password)
+        
     }
     render(){
         return(

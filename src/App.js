@@ -35,7 +35,6 @@ class App extends React.Component {
           />
           <GuestRoute
             location={location}
-            
             path="/signup/"
             exact
             component={Signup}
@@ -56,10 +55,7 @@ class App extends React.Component {
 function mapStateToProps(state){
     return {
       isAutheticated :!!state.user.email,
-      
-    }
-    
-
+      }
 }
 
 export default App;

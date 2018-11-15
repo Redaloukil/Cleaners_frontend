@@ -24,14 +24,12 @@ const userLoggedOut = () => ({
 
 
 export const login = (username , password ) => dispatch => {
-    const user = users.login(username , password)
-    console.log(user)
-    if(user.token){ 
+    users.login(username , password).then((user) => {
+        setAuthentificationHeader(user.token)
         localStorage.trndy = user.token
-        dispatch(userLoggedIn({...user , loaded:true})) 
-    }
+        dispatch(userLoggedIn({...user , loaded:true}))
+    })
 }
-
 export const signup = (username , email , phone_number , password ) => dispatch => {
     const user = users.signup(username , email , phone_number , password)
     if(user.token) {

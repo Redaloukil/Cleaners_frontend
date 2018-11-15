@@ -7,7 +7,6 @@ const API_ROOT = 'http://localhost:8000/';
 
 const encode = encodeURIComponent;
 const responseBody = (res) => { 
-  console.log(res.body)
   return res.body 
 };
 
@@ -22,7 +21,7 @@ export const requests = {
     del: url =>
       superagent.del(`${API_ROOT}${url}`).use(tokenPlugin).then(responseBody),
     get: url =>
-      superagent.get(`${API_ROOT}${url}`).use(tokenPlugin).then(responseBody),
+      superagent.get(`${API_ROOT}${url}`).use(tokenPlugin),
     put: (url, body) =>
       superagent.put(`${API_ROOT}${url}`, body).use(tokenPlugin).then(responseBody),
     post: (url, body) =>
@@ -53,6 +52,17 @@ export const accounts = {
     getAgent : () => 
       requests.get()
 }
+
+export const orders = {
+  getOrders : () => {
+    requests.get('orders/clients/')
+  },
+  createOrder : () => {
+    requests.get('orders/clients/create')
+  }
+}
+
+
 
 
 
