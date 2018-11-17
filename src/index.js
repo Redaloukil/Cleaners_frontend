@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Switch , Route } from 'react-router-dom';
 
-import {store} from './store';
+import store from './store';
 import setAuthentificationHeader from './setAuthentificationHeader';
 import { fetchCurrentUserRequest , fetchCurrentUserSuccess } from './actions/auth';
 import createHistory from 'history/createBrowserHistory';

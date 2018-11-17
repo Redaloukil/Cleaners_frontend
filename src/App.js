@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './App.css';
+import PropTypes from "prop-types";
 import Home from './pages/home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -14,7 +15,7 @@ import UserRoute from './components/routes/UserRoute';
 
 class App extends React.Component {
   componentWillMount(){
-    
+
   }
   render() {
     const { isAutheticated , location } = this.props
@@ -52,10 +53,17 @@ class App extends React.Component {
   }
 }
 
+App.propTypes = {
+  
+  isAuthenticated: PropTypes.bool.isRequired,
+  
+};
+
+
 function mapStateToProps(state){
     return {
-      isAutheticated :!!state.user.email,
-      }
+      isAutheticated :!!state.user,
+    }
 }
 
-export default App;
+export default connect(mapStateToProps , {})(App);

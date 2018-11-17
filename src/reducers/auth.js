@@ -4,12 +4,12 @@ import {
     
 } from "../types/users";
   
-export default function user(state = { loaded: false }, action = {}) {
+export default function user(state = {}, action = {}) {
     switch (action.type) {
       case USER_LOGGED_IN:
-        return { ...action.user, loaded: true };
+        return { ...action.user};
     case USER_LOGGED_OUT:
-        return { loaded: true };
+        return {};
       default:
         return state;
     }

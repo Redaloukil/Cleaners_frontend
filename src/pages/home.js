@@ -17,7 +17,7 @@ const Home = () => {
 function mapStateToProps(state){
     
     return {
-        isAuthenticated : state.user.email
+        
     }
 }
 export default connect(null , mapStateToProps)(Home);
