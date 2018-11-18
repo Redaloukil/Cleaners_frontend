@@ -1,6 +1,7 @@
+.app-header {
+    background-color:#f4f4f4;
+}
 
-
-
-
-
-
+.bg-light {
+    background-color: transparent !important;
+}

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Login from '../../pages/Login';
 
 const UserRouter = ({isAuthenticated : isAuthenticated  , component:Component , ...rest}) => {
+    {console.log(isAuthenticated)}
     return(
         <Route
             {...rest}

@@ -9,6 +9,8 @@ import Dashbord from './pages/dashbord';
 import { Route , Switch } from 'react-router-dom';
 import GuestRoute from './components/routes/GuestRoute';
 import UserRoute from './components/routes/UserRoute';
+import { stat } from 'fs';
+
 
 
 
@@ -18,7 +20,7 @@ class App extends React.Component {
 
   }
   render() {
-    const { isAutheticated , location } = this.props
+    const { isAuthenticated , location } = this.props
     return (
       <div> 
         <Switch>
@@ -54,15 +56,13 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  
   isAuthenticated: PropTypes.bool.isRequired,
-  
 };
 
 
 function mapStateToProps(state){
     return {
-      isAutheticated :!!state.user,
+      isAuthenticated :!!state.users.email,
     }
 }
 
