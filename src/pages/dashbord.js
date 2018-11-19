@@ -12,12 +12,7 @@ class Dashbord extends React.Component {
 
     render(){
         return (
-            <div>
-                <Switch>
-                    <UserRoute path="/orders" component={Orders}/>
-                    <UserRoute path="/create" component={CreateOrders}/>
-                </Switch>
-            </div>
+            
         )
     }
 }

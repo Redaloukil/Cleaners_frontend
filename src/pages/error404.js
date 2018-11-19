@@ -12,10 +12,4 @@ const error404 = () => {
     )
 }
 
-function mapStateToProps(state){
-    return (
-        isAuthenticated : state.user
-    )
-}
-
 export default error404;

@@ -5,7 +5,7 @@ class Orders extends React.Component{
     render(){
         return(
             <div>
-            
+                hello Orders
             </div>
         )
         

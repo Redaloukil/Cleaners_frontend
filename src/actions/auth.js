@@ -3,7 +3,7 @@ import {
     CREATE_USER_FAILURE,
     FETCH_CURRENT_USER_REQUEST,
     FETCH_CURRENT_USER_SUCCESS
-  } from '../types/auth';
+  } from '../types/types';
   
   export const createUserRequest = user => ({
     type: CREATE_USER_REQUEST,

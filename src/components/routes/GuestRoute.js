@@ -1,8 +1,9 @@
 import React from 'react';
-import {connect} from 'redux';
+import {connect} from 'react-redux';
 import { Route  , Redirect} from 'react-router-dom';
 
 const GuestRoute = ({isAuthenticated : isAuthenticated , component : Component , ...rest }) => {
+  
     return (
       <Route
       {...rest}
@@ -10,13 +11,17 @@ const GuestRoute = ({isAuthenticated : isAuthenticated , component : Component ,
           !isAuthenticated ? (
             <Component {...props} />
           ):(
-          <Redirect to="/dashboard" />
+          <Redirect to="/" />
         )}
       />
     );
-   
+}
+
+function mapStatetoProps(state){
+    return {
+      isAuthenticated:!!state.users.email
+    }
 }
 
 
-
-export default GuestRoute;
+export default connect(mapStatetoProps)(GuestRoute);

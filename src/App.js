@@ -23,6 +23,7 @@ class App extends React.Component {
     const { isAuthenticated , location } = this.props
     return (
       <div> 
+      {console.log(isAuthenticated)}
         <Switch>
           <Route 
             location={location} 
@@ -42,11 +43,21 @@ class App extends React.Component {
             exact
             component={Signup}
           />
-          <UserRoute
+          <GuestRoute
             location={location}
             path="/dashbord/"
             exact
             component={Dashbord}
+          />
+          <UserRoute 
+            location={location} 
+            path="/dashbord/orders/" 
+            component={Orders}
+          />
+          <UserRoute 
+            location={location} 
+            path="/dashbord/create/" 
+            component={CreateOrders} 
           />
         </Switch>
     </div>

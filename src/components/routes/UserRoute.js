@@ -3,8 +3,7 @@ import { Route , Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Login from '../../pages/Login';
 
-const UserRouter = ({isAuthenticated : isAuthenticated  , component:Component , ...rest}) => {
-    {console.log(isAuthenticated)}
+const UserRoute = ({isAuthenticated : isAuthenticated  , component:Component , ...rest}) => {
     return(
         <Route
             {...rest}
@@ -16,4 +15,10 @@ const UserRouter = ({isAuthenticated : isAuthenticated  , component:Component , 
 }
 
 
-export default UserRouter;
+function mapStateToProps(state) {
+    return {
+      isAuthenticated: !!state.users.email
+    };
+  }
+  
+export default connect(mapStateToProps)(UserRoute);

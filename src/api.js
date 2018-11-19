@@ -28,7 +28,6 @@ export const requests = {
       superagent.post(`${API_ROOT}${url}`, body).use(tokenPlugin).then(responseBody)
   };
 
-
 export const users = {
     getUsers : () =>
         requests.get('users/users/'),
@@ -45,15 +44,16 @@ export const users = {
 export const accounts = {
     getClients : () => 
       requests.get('accounts/clients/'),
-    getClient : (id) => 
-      requests.get('accounts/clients/'+id),
+    getClient : ( ) => 
+      requests.get('accounts/clients/'),
     getAgents : () => 
       requests.get('accounts/clients/'),
     getAgent : () => 
       requests.get()
 }
 
-export const orders = {
+
+export const client = {
   getOrders : () => {
     requests.get('orders/clients/')
   },
