@@ -6,6 +6,8 @@ import Home from './pages/home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashbord from './pages/dashbord';
+import Orders from './pages/Orders';
+import CreateOrders from './pages/CreateOrders';
 import { Route , Switch } from 'react-router-dom';
 import GuestRoute from './components/routes/GuestRoute';
 import UserRoute from './components/routes/UserRoute';
@@ -49,12 +51,12 @@ class App extends React.Component {
             exact
             component={Dashbord}
           />
-          <UserRoute 
+          <GuestRoute 
             location={location} 
             path="/dashbord/orders/" 
             component={Orders}
           />
-          <UserRoute 
+          <GuestRoute 
             location={location} 
             path="/dashbord/create/" 
             component={CreateOrders} 

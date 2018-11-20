@@ -6,8 +6,10 @@ import { login } from '../actions/users';
 
 class Login extends React.Component {
     submit = (username , password ) => {
-        this.props.login(username , password)
-        this.props.history.push('/dashbord')
+        this.props.login(username , password , {}).then(()=> {
+            this.props.history.push('/dashbord')
+        })
+        
     }
     render(){
         return(
