@@ -32,11 +32,12 @@ export const fetchCurrentUserSuccess = user => ({
 
 export const login = (username , password , cb ) => dispatch => {
     users.login(username , password).then((user) => {
+        console.log("called login")
         setAuthentificationHeader(user.token)   
         localStorage.trndy = user.token
         dispatch(userLoggedIn(user))
         if (cb){
-            return cb
+            cb()
         }
     })
 }

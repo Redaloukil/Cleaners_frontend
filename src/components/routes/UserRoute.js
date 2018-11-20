@@ -16,9 +16,10 @@ const UserRoute = ({isAuthenticated : isAuthenticated  , component:Component , .
 
 
 function mapStateToProps(state) {
+    console.log(state)
     return {
       isAuthenticated: !!state.users.email
     };
   }
   
-export default connect(mapStateToProps)(UserRoute);
+export default connect(mapStateToProps , {})(UserRoute);

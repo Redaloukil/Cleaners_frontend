@@ -13,11 +13,8 @@ class Dashbord extends React.Component {
     render(){
         return (
             <div>
-                <h1>Dashbord</h1>
-                <br/>
-                <Link to="/dashbord/create">Create</Link>
-                <br/>
-                <Link to="/dashbord/orders">Orders</Link>
+                <LeftBar/>
+                <RightBar/>
             </div>
         )
     }
