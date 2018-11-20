@@ -3,6 +3,7 @@ import HomeNavbar from '../components/navs/HomeNavbar';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { stat } from 'fs';
+import '../styles/home.css';
 
 
 

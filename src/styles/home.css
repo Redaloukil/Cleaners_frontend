@@ -1,0 +1,8 @@
+.app-header {
+    background-color:#333;
+    height: 100%;
+}
+
+.bg-light {
+    background-color: transparent !important;
+}

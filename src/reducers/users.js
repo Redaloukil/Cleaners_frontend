@@ -4,7 +4,6 @@ import {USER_LOGGED_IN , USER_LOGGED_OUT , FETCH_CURRENT_USER_SUCCESS } from '..
 const users = (state = {} , action={}) => {
     switch(action.type){
         case USER_LOGGED_IN:
-            console.log({...state})
             return {...action.user}
         case USER_LOGGED_OUT:
             return {};
