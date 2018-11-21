@@ -1,4 +1,4 @@
-import { CLIENT_ORDER_CREATE } from '../types/orders';
+import { CREATE_ORDER_CLIENT , DELETE_ORDER_CLIENT } from '../types/types';
 import {orders} from '../api';
 
 const createOrder = (order) => ({
@@ -6,9 +6,19 @@ const createOrder = (order) => ({
     order
 })
 
+const deleteOrder = (order) => ({
+    type : DELETE_ORDER_CLIENT ,
+})
 
-export default create = () => dispatch => {
+
+export default createOrderClient = () => dispatch => {
     orders.createOrder().then((order) => {
         dispatch(createOrder())
     })
-} 
+}
+
+export default deleteOrderClient = () => dispatch => {
+    orders.createOrder().then((order) => {
+        dispatch(createOrder())
+    })
+}

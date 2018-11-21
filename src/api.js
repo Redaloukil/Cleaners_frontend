@@ -59,7 +59,11 @@ export const client = {
   },
   createOrder : () => {
     requests.get('orders/clients/create')
+  },
+  deleteOrder : () => {
+    requests.post('orders/clients/create')
   }
+
 }
 
 

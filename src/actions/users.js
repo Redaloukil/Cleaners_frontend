@@ -32,19 +32,24 @@ export const fetchCurrentUserSuccess = user => ({
 
 export const login = (username , password , cb ) => dispatch => {
     users.login(username , password).then((user) => {
-        console.log("called login")
-        setAuthentificationHeader(user.token)   
-        localStorage.trndy = user.token
-        dispatch(userLoggedIn(user))
+        console.log("called login");
+        setAuthentificationHeader(user.token);   
+        localStorage.trndy = user.token;
+        dispatch(userLoggedIn(user));
         if (cb){
-            cb()
+            cb();
         }
     })
 }
-export const signup = (username , email , phone_number , password ) => dispatch => {
+export const signup = (username , email , phone_number , password  , cb) => dispatch => {
     users.signup(username , email , phone_number , password).then((user)=> {
-        localStorage.trndy = user.token
-        
+        console.log("called signup");
+        setAuthentificationHeader(user.token);
+        localStorage.trndy = user.token;
+        dispatch();
+        if(cb){
+            cb();
+        }
     })
 }
 

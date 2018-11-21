@@ -2,7 +2,7 @@ import React from 'react';
 
 const Leftbar = () => {
     return (
-        <div className="col-sm-2">
+        <div className="col-sm-2" id="left">
             <h2>leftbar</h2>
         </div>
     )
