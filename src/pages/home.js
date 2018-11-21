@@ -13,7 +13,7 @@ const Home = () => {
             <HomeNavbar/>
             <div className="container">
                 <h1>Be able to clean your clothers by ordering <strong>Cleaners</strong></h1>
-                <Link to="/login">Login</Link> 
+                <Link className="home-link" to="/login">Login</Link> 
             </div>
         </header>
     )

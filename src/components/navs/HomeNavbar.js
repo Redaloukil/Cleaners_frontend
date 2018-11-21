@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
+import '../../styles/navbar.css';
 
 
 const Homenavbar = ({ isAuthenticated : isAuthenticated }) => {
@@ -10,7 +11,7 @@ const Homenavbar = ({ isAuthenticated : isAuthenticated }) => {
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container">
             <img className="navbar-brand" src={logo} width="50px"/>
-            <a className="navbar-brand">Navbar</a>
+            <Link className="navbar-brand" to="/">Navbar</Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
@@ -18,14 +19,14 @@ const Homenavbar = ({ isAuthenticated : isAuthenticated }) => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ml-auto">
                 <li className="nav-item active">
-                    <a className="nav-link">Home <span className="sr-only">(current)</span></a>
+                    <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link"><Link to="/login">Login</Link></a>
+                    <Link className="nav-link" to="/login">Login</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link"><Link to="/login">Link</Link></a>
-                </li> : 
+                    <Link className="nav-link"to="/login">Link</Link>
+                </li> 
                 
                 
             </ul>
