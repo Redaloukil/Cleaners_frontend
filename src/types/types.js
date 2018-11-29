@@ -1,5 +1,6 @@
 export const USER_LOGGED_IN = "USER_LOGGED_IN";
 export const USER_LOGGED_OUT = "USER_LOGGED_OUT";
+export const USER_SIGNED_IN = "USER_SIGNED_IN";
 export const LOCALE_SET = "LOCALE_SET";
 
 export const CREATE_USER_REQUEST = "CREATE_USER_REQUEST";

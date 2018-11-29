@@ -54,16 +54,21 @@ export const accounts = {
 
 
 export const client = {
-  getOrders : () => {
-    requests.get('orders/clients/')
-  },
-  createOrder : () => {
-    requests.get('orders/clients/create')
-  },
-  deleteOrder : () => {
-    requests.post('orders/clients/create')
-  }
+    getClients : () => {
+      console.log("request clients");
+    },
+    getClient : () => {
+      console.log("request client");
+    }
+}
 
+export const orders = {
+    getOrders : () => {
+      console.log("request orders");
+    },
+    getOrder : () => {
+      console.log("request order");
+    },
 }
 
 

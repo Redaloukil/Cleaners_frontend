@@ -7,18 +7,20 @@ const createOrder = (order) => ({
 })
 
 const deleteOrder = (order) => ({
-    type : DELETE_ORDER_CLIENT ,
+    type : DELETE_ORDER_CLIENT,
+    order
 })
 
 
 export default createOrderClient = () => dispatch => {
     orders.createOrder().then((order) => {
-        dispatch(createOrder())
+        
+        dispatch(createOrder(order))
     })
 }
 
 export default deleteOrderClient = () => dispatch => {
     orders.createOrder().then((order) => {
-        dispatch(createOrder())
+        dispatch(deleteOrder(order))
     })
 }

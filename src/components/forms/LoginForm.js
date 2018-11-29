@@ -2,7 +2,7 @@ import React from 'react';
 import {users} from '../../api';
 import { isEmail } from 'validator';
 import { Link } from 'react-router-dom';
-import { login } from '../../actions/users';
+import { login } from '../../actions/aut';
 import { Redirect } from 'react-router-dom';
 
 class LoginForm extends React.Component {

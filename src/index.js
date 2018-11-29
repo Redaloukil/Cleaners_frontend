@@ -7,13 +7,14 @@ import { BrowserRouter, Switch , Route } from 'react-router-dom';
 
 import store from './store';
 import setAuthentificationHeader from './setAuthentificationHeader';
-import { fetchCurrentUserRequest , fetchCurrentUserSuccess } from './actions/auth';
+import { fetchCurrentUserRequest , fetchCurrentUserSuccess } from './actions/users';
 import createHistory from 'history/createBrowserHistory';
+import { decode } from 'punycode';
 
 
 if(localStorage.trndy) {
     setAuthentificationHeader(localStorage.trndy);
-    store.dispatch(fetchCurrentUserRequest());
+    console.log(localStorage.trndy); 
 } else {
     store.dispatch(fetchCurrentUserSuccess({}));
 }
