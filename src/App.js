@@ -51,6 +51,12 @@ class App extends React.Component {
             exact
             component={Dashbord}
           />
+          <UserRoute
+            location={location}
+            path="/dashbord/orders"
+            exact
+            component={Dashbord}
+          />
       </Switch>
     </div>
      

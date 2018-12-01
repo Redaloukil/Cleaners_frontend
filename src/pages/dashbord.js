@@ -28,7 +28,6 @@ class Dashbord extends React.Component {
                     <LeftBar/>
                     <RightBar/>
                     <br/>
-                    <Link to="dashbord/create/">Create</Link>
                     <button onClick={this.logoutCall}>Logout</button>
                 </div>
             </div>
