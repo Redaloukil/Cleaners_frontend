@@ -1,13 +1,25 @@
 import React from 'react';
-
-const Rightbar = () => {
-    return (
-        <div className="col-sm-9" id="right">
-            <h2>Rightbar</h2>
-        </div>
-    )
+import {Route , Router , Switch} from 'react-router-dom';
+import Create from './createOrder';
+import UserRoute from '../../components/routes/UserRoute';
 
 
+class Rightbar extends React.Component {
+    
+    render (){
+
+        return(
+            <Route 
+                path="create/"
+                component={Create}
+            />
+            
+            
+                
+            
+        )
+    }
+        
 }
 
 export default Rightbar;

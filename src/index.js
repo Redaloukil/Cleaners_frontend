@@ -9,12 +9,12 @@ import store from './store';
 import setAuthentificationHeader from './setAuthentificationHeader';
 import { fetchCurrentUserRequest , fetchCurrentUserSuccess } from './actions/users';
 import createHistory from 'history/createBrowserHistory';
-import { decode } from 'punycode';
+import decode from 'jwt-decode';
 
 
 if(localStorage.trndy) {
     setAuthentificationHeader(localStorage.trndy);
-    console.log(localStorage.trndy); 
+    
 } else {
     store.dispatch(fetchCurrentUserSuccess({}));
 }

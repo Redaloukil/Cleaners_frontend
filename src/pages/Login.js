@@ -2,7 +2,7 @@ import React from 'react';
 import LoginForm from '../components/forms/LoginForm';
 import { connect } from 'react-redux';
 import { users } from '../api';
-import { login } from '../actions/aut';
+import { login } from '../actions/auth';
 
 class Login extends React.Component {
     submit = (username , password ) => {

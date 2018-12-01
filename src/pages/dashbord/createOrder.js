@@ -1,11 +1,17 @@
 import React from 'react';
 
 
-class Order extends React.Component {
+class Create extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            page:
         }
     }
+    render(){
+        return(
+            <div>hello</div>
+        )
+    }
 } 
+
+export default Create;

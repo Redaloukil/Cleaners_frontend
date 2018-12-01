@@ -7,14 +7,9 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashbord from './pages/dashbord';
 import Orders from './pages/Orders';
-import CreateOrders from './pages/CreateOrders';
 import { Route , Switch } from 'react-router-dom';
 import GuestRoute from './components/routes/GuestRoute';
 import UserRoute from './components/routes/UserRoute';
-import { stat } from 'fs';
-
-
-
 
 
 class App extends React.Component {
@@ -50,17 +45,13 @@ class App extends React.Component {
             exact
             component={Dashbord}
           />
-          <UserRoute 
-            location={location} 
-            path="/dashbord/orders/" 
-            component={Orders}
+          <UserRoute
+            location={location}
+            path="/dashbord/create"
+            exact
+            component={Dashbord}
           />
-          <UserRoute 
-            location={location} 
-            path="/dashbord/create/" 
-            component={CreateOrders} 
-          />
-        </Switch>
+      </Switch>
     </div>
      
     )

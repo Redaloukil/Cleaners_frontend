@@ -46,8 +46,11 @@ export const signup = (username , email , phone_number , password  , cb) => disp
     })
 }
 
-export const logout = () => dispatch => {
+export const logout = (cb) => (dispatch) => {
+    localStorage.removeItem("trndy");
     setAuthentificationHeader();
-    localStorage.removeItem("tnrdy");
     dispatch(userLoggedOut());
+    if (cb){
+        cb();
+    }
 }

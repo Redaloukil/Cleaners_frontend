@@ -18,8 +18,7 @@ class SignupForm extends React.Component {
             password : '',
             confirm_password : ''
         },
-        errors : {}
-        ,
+        errors : {},
         loading : false,
     }
     onChange = e =>

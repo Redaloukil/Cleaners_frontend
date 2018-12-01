@@ -1,6 +1,6 @@
 import React from 'react';
 import SignupForm from '../components/forms/SignupForm';
-import { signup } from '../actions/aut';
+import { signup } from '../actions/auth';
 import { connect } from 'react-redux';
 
 class Signup extends React.Component {

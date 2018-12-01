@@ -3,6 +3,7 @@ import { Route , Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Login from '../../pages/Login';
 
+
 const UserRoute = ({isAuthenticated : isAuthenticated  , component:Component , ...rest}) => {
     return(
         <Route
