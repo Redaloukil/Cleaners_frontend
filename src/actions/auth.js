@@ -23,6 +23,7 @@ const userLoggedOut = () => ({
 
 export const login = (username , password , cb ) => dispatch => {
     users.login(username , password).then((user) => {
+        console.log(user);
         setAuthentificationHeader(user.token);   
         localStorage.trndy = user.token;
         dispatch(userLoggedIn(user));
