@@ -14,7 +14,7 @@ const Home = () => {
             <HomeNavbar/>
             <div className="container">
                 <h1>Cleaning your laundary is our job</h1>
-                 
+                
             </div>
         </header>
         <section>

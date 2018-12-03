@@ -9,7 +9,9 @@ class Orders extends React.Component {
     }
     render(){
         return(
-            <div>hell</div>
+            <div>
+                orders
+            </div>
         )
     }
 } 
