@@ -9,13 +9,20 @@ import '../styles/home.css';
 
 const Home = () => {
     return(
+        <div>
         <header className="app-header">
             <HomeNavbar/>
             <div className="container">
-                <h1>Be able to clean your clothers by ordering <strong>Cleaners</strong></h1>
-                <Link className="home-link" to="/login">Login</Link> 
+                <h1>Cleaning your laundary is our job</h1>
+                 
             </div>
         </header>
+        <section>
+
+        </section>
+        <section>
+        </section>
+        </div>
     )
 }
 

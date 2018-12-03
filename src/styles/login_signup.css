@@ -1,0 +1,19 @@
+.left-side {
+    background-color:#333;
+    height: 100vh;
+}
+
+
+.right-side {
+
+}
+
+.right-side {
+    display: grid;
+    place-content: center;
+    
+}
+
+.login_signup {
+    height: 100vh;
+}

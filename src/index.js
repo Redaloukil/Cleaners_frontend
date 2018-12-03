@@ -10,7 +10,7 @@ import setAuthentificationHeader from './setAuthentificationHeader';
 import { fetchCurrentUserRequest , fetchCurrentUserSuccess } from './actions/users';
 import createHistory from 'history/createBrowserHistory';
 import decode from 'jwt-decode';
-
+import './index.css';
 
 if(localStorage.trndy) {
     setAuthentificationHeader(localStorage.trndy);

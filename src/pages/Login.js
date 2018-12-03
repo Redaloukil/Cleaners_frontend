@@ -13,20 +13,28 @@ class Login extends React.Component {
     }
     render(){
         return(
+            <main className="login_signup">
             <div className="container-fluid">
                 <div className="row">
-                    <div className="left-side col-sm-4">
-                        hello
+                    <div className="left-side col-sm-5">
+                        
                     </div>
-                    <div className="right-side col-sm-8">
+                    <div className="right-side col-sm-7">
                         <div className="container">
-                            <LoginForm submit={this.submit}/>
+                            <div className="row">
+                                <div className="col-sm-2">
+                                </div>
+                                <div className="col-sm-8 form-box">
+                                    <LoginForm submit={this.submit}/>
+                                </div>
+                            </div>
+                            
                         </div>
                         
                     </div>
                 </div>
             </div>
-            
+            </main>
         )
     }
     

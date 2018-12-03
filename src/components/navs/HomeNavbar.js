@@ -25,7 +25,7 @@ const Homenavbar = ({ isAuthenticated : isAuthenticated }) => {
                     <Link className="nav-link" to="/login">Login</Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link"to="/login">Link</Link>
+                    <Link className="nav-link" to="/signup">Create an account</Link>
                 </li> 
                 
                 
