@@ -48,34 +48,39 @@ class SignupForm extends React.Component {
         const {data , errors , loading } = this.state
         return(
             <form onSubmit={this.onSubmit}>
-                <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={data.email}
-                        onChange={this.onChange}
-                        className={
-                                errors.email ? "form-control is-invalid" : "form-control"
-                        }
-                    />
-                    <div className="invalid-feedback">{errors.email}</div>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="phone_number">Phone number</label>
-                    <input
-                        type="phone_number"
-                        id="phone_number"
-                        name="phone_number"
-                        value={data.phone_number}
-                        onChange={this.onChange}
-                        className={
-                                errors.phone_number ? "form-control is-invalid" : "form-control"
-                        }
-                    />
-                    <div className="invalid-feedback">{errors.phone_number}</div>
-                </div>
+                <h2 className="login_signup_title ">Thanks , for your trust !</h2>
+                <br/>
+                <p className="login_signup_desc">Please enter your phone number and password ,you need to enter this informations</p>
+                <div className="form-section">
+                    <div className="form-group">
+                        <label htmlFor="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={data.email}
+                            onChange={this.onChange}
+                            className={
+                                    errors.email ? "form-control is-invalid" : "form-control"
+                            }
+                        />
+                        <div className="invalid-feedback">{errors.email}</div>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="phone_number">Phone number</label>
+                        <input
+                            type="phone_number"
+                            id="phone_number"
+                            name="phone_number"
+                            value={data.phone_number}
+                            onChange={this.onChange}
+                            className={
+                                    errors.phone_number ? "form-control is-invalid" : "form-control"
+                            }
+                        />
+                        <div className="invalid-feedback">{errors.phone_number}</div>
+                    </div>
+                
                 <div className="form-group">
                     <label htmlFor="username">Username</label>
                     <input
@@ -118,9 +123,13 @@ class SignupForm extends React.Component {
                         />
                         <div className="invalid-feedback">{errors.password}</div>
                 </div>
+                </div>
+                <div className="form-section">
+
                 <button type="submit" className="btn btn-primary btn-block">
                     Signup
                 </button>
+                </div>
                 <small className="form-text text-center">
                         or <Link to="/login">Login</Link> if you have an account
                 </small>

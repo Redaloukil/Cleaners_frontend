@@ -22,14 +22,10 @@ class Login extends React.Component {
                     <div className="right-side col-sm-7">
                         <div className="container-fluid">
                             <div className="row">
-                                <div className="col-sm-1">
-
+                                <div className="container">
+                                <LoginForm submit={this.submit}/>
                                 </div>
-                                <div className="col-sm-9">
-                                    <div className="form-box">
-                                        <LoginForm submit={this.submit}/>
-                                    </div>
-                                </div>
+                                
                             </div>
                             
                         </div>

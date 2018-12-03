@@ -28,6 +28,12 @@
     
 }
 
+.btn-primary {
+    background-color: #3498db !important;
+    font-size:120%;
+    border:0px;
+}
+
 .login_signup_title {
     font-size:200%;
     color:#3498db;
