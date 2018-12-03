@@ -47,24 +47,26 @@ class LoginForm extends React.Component {
         const {data , errors , loading } = this.state
         return(
             <form onSubmit={this.onSubmit}>
-                
-                <div className="form-group">
-                    <label htmlFor="username">Phone number</label>
-                    <input
-                        type="text"
-                        id="username"
-                        name="username"
-                        value={data.username}
-                        onChange={this.onChange}
-                        className={
-                                errors.username ? "form-control is-invalid" : "form-control"
-                        }
-                    />
-                    <div className="invalid-feedback">{errors.username}</div>
-                </div>
-                
-                
-                <div className="form-group">
+                <i className="fa fa-smile-o icon" aria-hidden="true"></i>
+                <h2 className="login_signup_title ">Welcome Again , we missed you !</h2>
+                <br/>
+                <p className="login_signup_desc">Please enter your phone number and password ,you need to enter this informations</p>   
+                <div className="form-section">
+                    <div className="form-group">
+                        <label htmlFor="username">Phone number</label>
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            value={data.username}
+                            onChange={this.onChange}
+                            className={
+                                    errors.username ? "form-control is-invalid" : "form-control"
+                            }
+                        />
+                        <div className="invalid-feedback">{errors.username}</div>
+                    </div>
+                    <div className="form-group">
                         <label htmlFor="password">Password</label>
                         <input
                         type="password"
@@ -78,10 +80,20 @@ class LoginForm extends React.Component {
                         />
                         <div className="invalid-feedback">{errors.password}</div>
                 </div>
-                
+                </div>             
+                <div className="form-section">
                 <button type="submit" className="btn btn-primary btn-block">
                     Login
                 </button>
+                </div>
+                
+                
+                
+                
+                
+                <small className="form-text">
+                    Click <Link to="/login">Forgotten password</Link> if you forgot the password
+                </small>
             </form>
         )
     }
