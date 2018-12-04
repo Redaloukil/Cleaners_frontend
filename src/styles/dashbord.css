@@ -1,3 +1,20 @@
 #dashbord {
+    height: 100vh;
+}
+
+#dashbord-sections-list {
+
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color:#3498db;
+    font-size:140%;
+}
+
+#dashbord-sections-list .nav-link {
+    font-size:140% !important;
+}
+
+#dashbord-sections-list .nav-link {
     
 }
