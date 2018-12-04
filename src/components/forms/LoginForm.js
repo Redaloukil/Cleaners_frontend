@@ -47,7 +47,6 @@ class LoginForm extends React.Component {
         const {data , errors , loading } = this.state
         return(
             <form onSubmit={this.onSubmit}>
-                <i className="fa fa-smile-o icon" aria-hidden="true"></i>
                 <h2 className="login_signup_title ">Welcome Again , we missed you !</h2>
                 <br/>
                 <p className="login_signup_desc">Please enter your phone number and password ,you need to enter this informations</p>   

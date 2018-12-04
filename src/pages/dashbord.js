@@ -9,11 +9,11 @@ import { logout } from '../actions/auth';
 import { client , orders  } from '../api';
 
 
-// const mapDispatchToProps = () => dispatch => ({
-//     getClient  :  dispatch => {},
-//     getClients :  dispatch => {},
-        
-// })
+const mapDispatchToProps = () => dispatch => ({
+    getClient  :  dispatch => {},
+    getClients :  dispatch => {},
+    logout
+})
 
 class Dashbord extends React.Component {
     logoutCall = () => {
@@ -23,12 +23,19 @@ class Dashbord extends React.Component {
     }
     render(){
         return (
-            <div>
-                <div className="row">
-                    <LeftBar/>
-                    <RightBar/>
+            <div className="container">
+                <div id="dashbord">
+                    <div className="row">
+                        <div className="col-sm-3">
+                            <LeftBar user={this.props.user}/>
+                        </div>
+                        <div className="col-sm-9">
+                            <RightBar/>
+                        </div>
+                    
                     <br/>
                     <button onClick={this.logoutCall}>Logout</button>
+                    </div>
                 </div>
             </div>
         )
@@ -37,8 +44,8 @@ class Dashbord extends React.Component {
 
 function mapStateToProps(state){
     return {
-        user : state.users.id,
+        user : state.users,
     }
 }
 
-export default connect(mapStateToProps , {logout})(Dashbord)
+export default connect(mapStateToProps , mapDispatchToProps)(Dashbord)

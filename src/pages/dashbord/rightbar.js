@@ -1,7 +1,7 @@
 import React from 'react';
 import Sections from './sections';
 import Statistics from './statistics';
-
+import DashbordNav from './DashbordNav';
 
 class Rightbar extends React.Component {
     
@@ -9,7 +9,9 @@ class Rightbar extends React.Component {
 
         return(
             <div>
-                <h2>Right Bar</h2>
+                <DashbordNav/>
+                <h2>Welcome Again , User name</h2>
+
                 <Statistics/>
                 <Sections/>
             </div>
