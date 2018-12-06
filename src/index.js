@@ -9,9 +9,6 @@ import store from './store';
 import setAuthentificationHeader from './setAuthentificationHeader';
 import { fetchCurrentUserRequest , fetchCurrentUserSuccess } from './actions/users';
 import createHistory from 'history/createBrowserHistory';
- 
-import rootSaga from './rootSaga';
-
 import './index.css';
 
 // SagaMiddleware.run(rootSaga);

@@ -22,15 +22,15 @@ class Dashbord extends React.Component {
     }
     render(){
         return (
-            <div className="container-fluid">
-                <div id="dashbord">
+            <div id="dashbord">
+                <div className="container-fluid">
                     <div className="row">
                             <LeftBar user={this.props.user}/>
                             <RightBar/>
                         </div>
-                        <br/>
+                        
                     </div>
-                </div>
+            </div>
         
         )
     }

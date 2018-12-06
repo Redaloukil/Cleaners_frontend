@@ -34,7 +34,7 @@ export const users = {
     getUser :() => 
         requests.get('users/users/'),
     currentUser : () => 
-        requests.get('users/user/'),
+        requests.get('users/users/'),
     login : (username , password) => 
         requests.post('users/login/' , {username : username , password : password}),
     signup : (username , email , phone_number , password ) => 
