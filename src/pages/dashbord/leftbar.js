@@ -9,7 +9,7 @@ const Leftbar = (props) => {
     return (
         <div class="col-sm-2"id="left">
             <h2>Cleaners</h2>
-            <p></p>
+            <p>this is cleaners dashbord</p>
             <div class="nav flex-column nav-pills" id="v-pills-tab dashbord-sections-list" role="tablist" aria-orientation="vertical">
                 <Link className="nav-link" id="v-pills-home-tab" data-toggle="pill" to="/acceuil" role="tab" aria-controls="v-pills-home" aria-selected="true">Acceuil</Link>
                 <Link className="nav-link" id="v-pills-profile-tab" data-toggle="pill" to="/orders" role="tab" aria-controls="v-pills-profile" aria-selected="false">Orders</Link>

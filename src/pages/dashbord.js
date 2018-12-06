@@ -25,10 +25,7 @@ class Dashbord extends React.Component {
             <div className="container-fluid">
                 <div id="dashbord">
                     <div className="row">
-                        
                             <LeftBar user={this.props.user}/>
-                        
-                        
                             <RightBar/>
                         </div>
                         <br/>

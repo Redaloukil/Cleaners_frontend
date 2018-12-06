@@ -10,12 +10,12 @@ import { users } from '../api';
 import setAuthentificationHeader from '../setAuthentificationHeader';
 
 
-const userLoggedIn = (user) => ({
+export const userLoggedIn = (user) => ({
     type : USER_LOGGED_IN, 
     user,
 })
 
-const userLoggedOut = () => ({
+export const userLoggedOut = () => ({
     type:USER_LOGGED_OUT
 })
 
@@ -23,7 +23,6 @@ const userLoggedOut = () => ({
 
 export const login = (username , password , cb ) => dispatch => {
     users.login(username , password).then((user) => {
-        console.log(user);
         setAuthentificationHeader(user.token);   
         localStorage.trndy = user.token;
         dispatch(userLoggedIn(user));

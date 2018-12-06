@@ -33,7 +33,7 @@ export const users = {
         requests.get('users/users/'),
     getUser :() => 
         requests.get('users/users/'),
-    current : () => 
+    currentUser : () => 
         requests.get('users/user/'),
     login : (username , password) => 
         requests.post('users/login/' , {username : username , password : password}),

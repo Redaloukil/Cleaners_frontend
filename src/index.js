@@ -9,16 +9,23 @@ import store from './store';
 import setAuthentificationHeader from './setAuthentificationHeader';
 import { fetchCurrentUserRequest , fetchCurrentUserSuccess } from './actions/users';
 import createHistory from 'history/createBrowserHistory';
-import decode from 'jwt-decode';
+ 
+import rootSaga from './rootSaga';
+
 import './index.css';
+
+// SagaMiddleware.run(rootSaga);
 
 if(localStorage.trndy) {
     setAuthentificationHeader(localStorage.trndy);
-    
+    store.dispatch(fetchCurrentUserRequest());
 } else {
     store.dispatch(fetchCurrentUserSuccess({}));
 }
-  
+
+if (localStorage.trndy) {
+    
+}
 
 const history = createHistory();
 
