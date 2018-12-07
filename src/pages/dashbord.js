@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch , Route , Link } from 'react-router-dom';
+
 import UserRoute from '../components/routes/UserRoute';
 import LeftBar from './dashbord/leftbar';
 import RightBar from './dashbord/rightbar';
