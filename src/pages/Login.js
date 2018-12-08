@@ -8,8 +8,8 @@ import '../styles/login_signup.css';
 class Login extends React.Component {
     submit = (username , password ) => {
         this.props.login(username , password , () => {
-            this.props.history.push('/dashbord');       
-        });
+            this.props.history.push('/dashbord');
+        }) 
     }
     render(){
         return(

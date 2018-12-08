@@ -6,8 +6,6 @@
 
 }
 
-
-
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     background-color:#3498db;
     font-size:140%;
@@ -19,4 +17,17 @@
 
 #dashbord-sections-list .nav-link {
     
+}
+
+.dash-link {
+    font-size:100%;
+    padding:8% 3%;
+    color: white;
+    margin:2%;
+    opacity:0.9;
+    font-weight:700;
+}
+
+.dash-link:hover {
+    background-color:#333;
 }

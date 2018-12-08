@@ -1,80 +1,32 @@
-import superagentPromise from 'superagent-promise';
-import _superagent from 'superagent';
 
-const superagent = superagentPromise(_superagent, global.Promise);
+import axios from 'axios';
+
+
+
 
 const API_ROOT = 'http://localhost:8000/';
 
-const encode = encodeURIComponent;
-const responseBody = (res) => { 
-  return res.body 
-};
-
-let token = null;
-const tokenPlugin = req => {
-  if (token) {
-    req.set('authorization', `Token ${token}`);
-    console.log(req);
-  }
-}
 
 
-
-export const requests = {
-    del: url =>
-      superagent.del(`${API_ROOT}${url}`).use(tokenPlugin).then(responseBody),
-    get: url =>
-      superagent.get(`${API_ROOT}${url}`).use(tokenPlugin).then(responseBody),
-    put: (url, body) =>
-      superagent.put(`${API_ROOT}${url}`, body).use(tokenPlugin).then(responseBody),
-    post: (url, body) =>
-      superagent.post(`${API_ROOT}${url}`, body).use(tokenPlugin).then(responseBody)
-  };
 
 export const users = {
-    getUsers : () =>
-        requests.get('users/users/'),
-    getUser :() => 
-        requests.get('users/users/'),
-    currentUser : () => 
-        requests.get('users/users/'),
-    login : (username , password) => 
-        requests.post('users/login/' , {username : username , password : password}),
-    signup : (username , email , phone_number , password ) => 
-        requests.post('users/signup/' , {username, email, phone_number, password}),
+    login: (username ,password) =>
+        axios.post("http://localhost:8000/users/login/", { username , password }).then(res => res.data),
+    signup: user =>
+        axios.post("/api/users", { user }).then(res => res.data.user),
+    confirm: token =>
+      axios
+        .post("/api/auth/confirmation", { token })
+        .then(res => res.data.user),
+    resetPasswordRequest: email =>
+      axios.post("/api/auth/reset_password_request", { email }),
+    validateToken: token => axios.post("/api/auth/validate_token", { token }),
+    resetPassword: data => axios.post("/api/auth/reset_password", { data }),
+    fetchCurrentUser: () =>
+      axios.get("http://localhost:8000/users/users/").then(res => res.data.user)
+  }
+export const orders =  {
+
 }
-
-export const accounts = {
-    getClients : () => 
-      requests.get('accounts/clients/'),
-    getClient : ( ) => 
-      requests.get('accounts/clients/'),
-    getAgents : () => 
-      requests.get('accounts/clients/'),
-    getAgent : () => 
-      requests.get()
-}
-
-
-export const client = {
-    getClients : () => {
-      console.log("request clients");
-    },
-    getClient : () => {
-      console.log("request client");
-    }
-}
-
-export const orders = {
-    getOrders : () => {
-      console.log("request orders");
-    },
-    getOrder : () => {
-      console.log("request order");
-    },
-}
-
-
-
 
 
