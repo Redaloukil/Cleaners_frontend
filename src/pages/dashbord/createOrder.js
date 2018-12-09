@@ -5,12 +5,14 @@ class Create extends React.Component {
     constructor(props){
         super(props);
         this.state = {
+            
         }
     }
     render(){
         return(
-            <div>
-                create
+            <div className="container-fluid">
+                <div className=""></div>
+                <div className=""></div>
             </div>
         )
     }

@@ -2,10 +2,9 @@ import axios from 'axios';
 
 export default (token = null) => {
     if(token) {
-        console.log("token setted in header")
-        axios.defaults.headers.common.Authorization = `Token ${token}`;
-        console.log(axios.defaults.headers.common.Authorization);
+        axios.defaults.headers.common.authorization = `Bearer ${token}`;
+        console.log(axios.defaults.headers.common.authorization)
     }else {
-        delete axios.defaults.headers.common.Authorization;
+        delete axios.defaults.headers.common.authorization;
     }
 }

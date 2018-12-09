@@ -1,13 +1,7 @@
-
 import axios from 'axios';
 
 
-
-
 const API_ROOT = 'http://localhost:8000/';
-
-
-
 
 export const users = {
     login: (username ,password) =>
@@ -24,7 +18,13 @@ export const users = {
     resetPassword: data => axios.post("/api/auth/reset_password", { data }),
     fetchCurrentUser: () =>
       axios.get("http://localhost:8000/users/users/").then(res => res.data.user)
-  }
+}
+
+export const clients = {
+  getClients : () => {},
+  getClient : () => {},
+
+}
 export const orders =  {
 
 }
