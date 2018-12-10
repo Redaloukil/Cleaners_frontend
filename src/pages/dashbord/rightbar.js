@@ -8,7 +8,7 @@ import './../../styles/right.css';
 
 const Rightbar = () => {
     return(
-            <div className="col-sm-10" id="right">
+            <div className="col-sm-9" id="right">
                 <DashbordNav/>
                 <Profile/>
                 <Statistics/>

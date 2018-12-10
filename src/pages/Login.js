@@ -9,7 +9,7 @@ class Login extends React.Component {
     submit = (username , password ) => {
         this.props.login(username , password , () => {
             this.props.history.push('/dashbord');
-        }) 
+        })
     }
     render(){
         return(
@@ -37,5 +37,9 @@ class Login extends React.Component {
     }
     
 }
+
+// function mapStateToProps(state){
+//     error:form.error.login
+// }
 
 export default connect(null , {login})(Login);

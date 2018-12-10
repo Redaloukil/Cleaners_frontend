@@ -17,7 +17,7 @@ export const users = {
     validateToken: token => axios.post("/api/auth/validate_token", { token }),
     resetPassword: data => axios.post("/api/auth/reset_password", { data }),
     fetchCurrentUser: () =>
-      axios.get("http://localhost:8000/users/users/").then(res => res.data.user)
+      axios.get("http://localhost:8000/users/users/").then(res => res.data),
 }
 
 export const clients = {

@@ -31,7 +31,7 @@ export const login = (username , password , cb) => dispatch => {
             cb();
         }
     }).catch((err)=> {
-        console.log(err);
+        dispatch()
     })
 }
 
