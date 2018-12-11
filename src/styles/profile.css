@@ -2,3 +2,11 @@
 
 }
 
+#profile .fa-user-circle-o{
+    font-size:600%;
+}
+
+.dash-infos {
+    font-size:100%;
+    opacity:0.7;
+}

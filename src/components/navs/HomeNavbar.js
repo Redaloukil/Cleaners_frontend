@@ -5,6 +5,37 @@ import logo from '../../images/logo.png';
 import '../../styles/navbar.css';
 
 
+const LoginLinks = () => {
+    return (
+        <ul className="navbar-nav ml-auto">
+                    <li className="nav-item active">
+                        <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
+                    </li>
+                    
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/login">Login</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/signup">Create an account</Link>
+                    </li>
+        </ul>
+    )
+}
+
+const AuthenticatedLinks = () => {
+    return(
+        <ul className="navbar-nav ml-auto">
+                    <li className="nav-item active">
+                        <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
+                    </li>
+                    
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/dashbord/">dashbord</Link>
+                    </li>
+        </ul>
+    )
+}
+
 const Homenavbar = ({ isAuthenticated : isAuthenticated }) => {
     
     return(
@@ -17,19 +48,7 @@ const Homenavbar = ({ isAuthenticated : isAuthenticated }) => {
             </button>
 
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav ml-auto">
-                <li className="nav-item active">
-                    <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
-                </li>
-                <li className="nav-item">
-                    <Link className="nav-link" to="/login">Login</Link>
-                </li>
-                <li className="nav-item">
-                    <Link className="nav-link" to="/signup">Create an account</Link>
-                </li> 
-                
-                
-            </ul>
+                { isAuthenticated ? <AuthenticatedLinks/> : <LoginLinks/> }
                 
             </div> 
             </div>

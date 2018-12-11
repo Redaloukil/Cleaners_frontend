@@ -26,7 +26,9 @@ export const clients = {
 
 }
 export const orders =  {
-
+      getClientsOrders : () => 
+        axios.get("http://localhost:8000/users/users/").then(res => res.data),
+      
 }
 
 
