@@ -7,5 +7,5 @@ import { users } from './../api';
 export function* fetchUserSaga() {
   const user = yield call(users.fetchCurrentUser)
   yield put(userLoggedIn(user));
-  history.push('/dashbord')
+  history.push('/dashbord/')
 }

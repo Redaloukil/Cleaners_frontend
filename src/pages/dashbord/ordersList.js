@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { connect } from 'react-redux';
 
 class Orders extends React.Component {
     constructor(props){
@@ -9,11 +9,12 @@ class Orders extends React.Component {
     }
     render(){
         return(
-            <div>
+            <div className="container">
                 orders
             </div>
         )
     }
 } 
+
 
 export default Orders;

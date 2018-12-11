@@ -4,7 +4,7 @@ import Statistics from './statistics';
 import DashbordNav from './DashbordNav';
 import Profile from './profile';
 import './../../styles/right.css';
-
+import { connect } from 'react-redux';
 
 const Rightbar = () => {
     return(
@@ -17,4 +17,10 @@ const Rightbar = () => {
         )
 }
 
-export default Rightbar;
+function mapStateToProps(){
+    return {
+        
+    }   
+}
+
+export default connect( mapStateToProps , {})(Rightbar);

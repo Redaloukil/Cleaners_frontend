@@ -47,13 +47,13 @@ class App extends React.Component {
           />
           <UserRoute
             location={location}
-            path="/dashbord/create"
+            path="/dashbord/create/"
             exact
             component={Dashbord}
           />
           <UserRoute
             location={location}
-            path="/dashbord/orders"
+            path="/dashbord/orders/"
             exact
             component={Dashbord}
           />

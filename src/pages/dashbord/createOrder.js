@@ -10,9 +10,8 @@ class Create extends React.Component {
     }
     render(){
         return(
-            <div className="container-fluid">
-                <div className=""></div>
-                <div className=""></div>
+            <div className="container">
+                create an order
             </div>
         )
     }

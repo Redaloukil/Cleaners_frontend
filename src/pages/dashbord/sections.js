@@ -10,8 +10,8 @@ class Sections extends React.Component {
         return (
             <div>
                 <Switch>
-                    <Route exact path="/dashbord/orders"component={Orders}/>    
-                    <Route exact path="/dashbord/create"component={Create}/>
+                    <Route exact path="/orders/"component={Orders}/>    
+                    <Route exact path="/create/"component={Create}/>
                 </Switch>
             </div>
         )
