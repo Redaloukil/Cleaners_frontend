@@ -22,4 +22,4 @@ const DashbordNav = () => {
 
 
 
-export default connect({},logout)(DashbordNav);
+export default DashbordNav;

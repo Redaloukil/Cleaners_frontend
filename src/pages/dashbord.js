@@ -9,17 +9,10 @@ import { client , orders  } from '../api';
 import '../styles/dashbord.css';
 
 const mapDispatchToProps = () => dispatch => ({
-    getClient  :  dispatch => {},
-    getClients :  dispatch => {},
-    logout
+    
 })
 
 class Dashbord extends React.Component {
-    logoutCall = () => {
-        this.props.logout(()=> {
-            this.props.history.push('/')
-        })
-    }
     render(){
         return (
             <div id="dashbord">
