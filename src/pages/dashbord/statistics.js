@@ -4,23 +4,27 @@ import React from 'react';
 class Statistics extends React.Component {
     render(){
         return (
-            <div className="">
+            <div id="statistics">
                 <div className="row">
                     <div className="col-sm-3">
-                        <div className="">
+                        <div className="box">
+                            hello world
                         </div>
                     </div>
-                    <div className="col-sm-4">
-                        <div className="">
+                    <div className="col-sm-3">
+                        <div className="box">
+                        hello world
                         </div>
                     </div>
-                    <div className="col-sm-5">
-                        <div className="">
+                    <div className="col-sm-3">
+                        <div className="box">
+                        hello world
                         </div>
                     </div>
                     <br/>
-                    <div className="col-sm-12">
-                        <div className="">
+                    <div className="col-sm-3">
+                        <div className="box">
+                        hello world
                         </div>
                     </div>
                 </div>

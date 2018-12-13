@@ -8,10 +8,10 @@ import Orders from './ordersList';
 class Sections extends React.Component {
     render(){
         return (
-            <div>
+            <div id="section">
                 <Switch>
-                    <Route exact path="/orders/"component={Orders}/>    
-                    <Route exact path="/create/"component={Create}/>
+                    <Route exact path="/dahsbord/orders/"component={Orders}/>    
+                    <Route path="/dashbord/create/"component={Create}/>
                 </Switch>
             </div>
         )

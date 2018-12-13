@@ -9,10 +9,12 @@ import { connect } from 'react-redux';
 const Rightbar = () => {
     return(
             <div className="col-sm-9" id="right">
+                <div className="container">
                 <DashbordNav/>
                 <Profile/>
                 <Statistics/>
                 <Sections/>
+                </div>
             </div>
         )
 }

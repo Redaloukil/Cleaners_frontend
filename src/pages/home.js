@@ -13,7 +13,7 @@ const Home = () => {
         <header className="app-header">
             <HomeNavbar/>
             <div className="container">
-                <h1>Cleaning your laundary is our job</h1>
+                <h1>Cleaning your laudary is our job</h1>
                 <p>Though the gravity still dragged at him, his muscles were making great efforts to adjust. After the daily classes he no longer collapsed immediately into bed. Only the nightmares got worse.</p>
                 
             </div>

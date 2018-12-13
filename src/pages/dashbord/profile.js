@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import {} from '../../styles/dashbord.css'
 import './../../styles/profile.css';
 
 const Profile = (props) => {
     return(
-        <div id="profile">
+        <div id="profile" className="box">
             <div className="container">
                 <div className="row">
                     <div class="col-sm-2">

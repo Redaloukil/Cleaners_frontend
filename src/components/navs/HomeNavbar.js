@@ -62,4 +62,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps)(Homenavbar);
+export default connect(mapStateToProps , {})(Homenavbar);

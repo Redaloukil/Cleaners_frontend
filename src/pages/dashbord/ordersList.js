@@ -10,7 +10,7 @@ class Orders extends React.Component {
     render(){
         return(
             <div className="container">
-                orders
+                this is orders list
             </div>
         )
     }
