@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../images/cleaners3.png';
 
 class LoginForm extends React.Component {
     constructor(props){
@@ -43,9 +44,13 @@ class LoginForm extends React.Component {
         const {data , errors , loading } = this.state
         return(
             <form onSubmit={this.onSubmit}>
-                <h2 className="login_signup_title ">Welcome Again , we missed you !</h2>
-                <br/>
-                <p className="login_signup_desc">Please enter your phone number and password ,you need to enter this informations</p>   
+                <div className="text-center">
+                <img className="navbar-brand" src={logo} width="300px"/>
+                <p className="login_signup_desc">Please enter your phone number and password ,you need to enter this informations</p>
+                </div>
+                
+                
+                   
                 <div className="form-section">
                     <div className="form-group">
                         <label htmlFor="username">Phone number</label>

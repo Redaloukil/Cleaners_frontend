@@ -6,7 +6,6 @@ import history from './../../history';
  
 const DashbordNav = () => {
         const logoutRequest = () => {
-            console.log("logout called")
             logout(() => {
                 history.push('/');    
             })
