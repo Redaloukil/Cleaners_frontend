@@ -43,6 +43,20 @@ section {
 #team-image {
     border-radius:4px;
     box-shadow:30px 30px 0px rgba(255, 255, 255, 0.5); 
+    border:2px solid #ffffff;
+    
+}   
+
+#clients {
+    color:#333;
+    text-align: center;
+}
+
+#clients h1{
+    font-weight:300;
+    color:#333;
+    text-align: center;
+    opacity: 0.8;
 }
 
 

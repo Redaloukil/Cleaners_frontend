@@ -6,6 +6,7 @@ import phone from './../images/apple.png';
 import { stat } from 'fs';
 import '../styles/home.css';
 import { Button } from 'semantic-ui-react';
+import Footer from './../components/navs/Footer';
 
 
 
@@ -68,8 +69,16 @@ const Home = () => {
             
             </div>
         </section>
-        <section id="client">
-
+        <section id="clients">
+            <h1>Cleaners Has Honorable Clients</h1>
+            <p>Though the gravity still dragged at him, his muscles were making great efforts to adjust</p>
+            <div class="container">
+                <div className="client">
+                    <img/>
+                    <h4>Mohamed Reda</h4>
+                    <h2>this must be the experience i had with laundary companies</h2>
+                </div>
+            </div>
         </section>
         <section id="partners">
         </section>
