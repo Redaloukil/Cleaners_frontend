@@ -44,10 +44,11 @@ class LoginForm extends React.Component {
         const {data , errors , loading } = this.state
         return(
             <form onSubmit={this.onSubmit}>
-                <div className="text-center">
-                <img className="navbar-brand" src={logo} width="300px"/>
+                
+                <h2 className="login_signup_title ">Welcome back !</h2>
+                <br/>
                 <p className="login_signup_desc">Please enter your phone number and password ,you need to enter this informations</p>
-                </div>
+                
                 
                 
                    

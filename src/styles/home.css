@@ -13,7 +13,6 @@
 .bg-light {
     background-color: transparent !important;
 }
-
 .home-link {
     color:#62bcfa;
 }
@@ -44,19 +43,69 @@ section {
     border-radius:4px;
     box-shadow:30px 30px 0px rgba(255, 255, 255, 0.5); 
     border:2px solid #ffffff;
-    
+
 }   
 
 #clients {
     color:#333;
     text-align: center;
+    background-color:#f7faff;
 }
 
 #clients h1{
     font-weight:300;
+    font-size:400%;
     color:#333;
     text-align: center;
     opacity: 0.8;
 }
 
+#testmonials {
+    padding:1% 0%;
+}
+.client {
+    display: inline-block;
+    padding:1%;
+    opacity:0.6;
+}
+.active{
+    opacity:1;
+}
+.quote {
+    font-size:140%;
+    color: #5487b5;
+}
+.client img{
+    margin-bottom:1%;
+    border-radius:50%;
+    border:9px solid rgba(98, 180, 250, 0.5);
+    cursor: pointer;
+}
+#partners {
+    padding:3% 0%;
+    color: #333;
+    text-align:center;
+}
+#partners h2 {
+    font-weight:300;
+    font-size: 200%;
+}
+.partner {
+    opacity:0.3;
+}
 
+footer {
+    background-color: #5487b5;
+    color: white;
+    padding:1%;
+}
+footer a{
+    font-weight:4   00;
+    text-decoration-style: dotted;
+    color: white;
+    font-size:100%;    
+}
+footer .fa {
+    font-size:300%;
+    margin:2%;
+}

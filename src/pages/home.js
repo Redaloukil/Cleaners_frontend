@@ -72,15 +72,60 @@ const Home = () => {
         <section id="clients">
             <h1>Cleaners Has Honorable Clients</h1>
             <p>Though the gravity still dragged at him, his muscles were making great efforts to adjust</p>
-            <div class="container">
+            <div id="testmonials"className="container-fluid">
+            <div className="client">
+            <img src="https://images.unsplash.com/photo-1528809217021-151305b50e55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80" className="" width="90px;" height="90px;"/>
+        </div>
                 <div className="client">
-                    <img/>
-                    <h4>Mohamed Reda</h4>
-                    <h2>this must be the experience i had with laundary companies</h2>
+                    <img src="https://images.unsplash.com/photo-1528809217021-151305b50e55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80" className="" width="90px;" height="90px;"/>
                 </div>
+                <div className="client">
+                    <img src="https://images.unsplash.com/photo-1528809217021-151305b50e55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80" className="" width="90px;" height="90px;"/>
+                </div>
+                <div className="client active">
+                    <img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80" className="" width="250px;" height="250px;"/>
+                    
+                </div>
+                <div className="client">
+                    <img src="https://images.unsplash.com/photo-1528809217021-151305b50e55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80" className="" width="90px;" height="90px;"/>
+                </div>
+                <div className="client">
+                    <img src="https://images.unsplash.com/photo-1528809217021-151305b50e55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80" className="" width="90px;" height="90px;"/>
+                </div>
+                <div className="client">
+                    <img src="https://images.unsplash.com/photo-1528809217021-151305b50e55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80" className="" width="90px;" height="90px;"/>
+                </div>  
+            </div>
+            <div className="quote">
+                <p>Monica Belatrova</p>
+                <p>"Though the gravity still dragged at him, his muscles were making great efforts to adjust"</p>
             </div>
         </section>
         <section id="partners">
+            <h2>Cleaners Partners</h2>
+            <div className="container">
+                <div class="row">
+                    <div class="partner col-sm-2">
+                        <img className="" width="100%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo_TV_2015.png/280px-Logo_TV_2015.png"/>
+                    </div>
+                    <div class="partner col-sm-2">
+                        <img className="" width="100%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo_TV_2015.png/280px-Logo_TV_2015.png"/>
+                    </div>
+                    <div class="partner col-sm-2">
+                        <img className="" width="100%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo_TV_2015.png/280px-Logo_TV_2015.png"/>
+                    </div>
+                    <div class="partner col-sm-2">
+                        <img className="" width="100%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo_TV_2015.png/280px-Logo_TV_2015.png"/>
+                    </div>
+                    <div class="partner col-sm-2">
+                        <img className="" width="100%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo_TV_2015.png/280px-Logo_TV_2015.png"/>
+                    </div>
+                    <div class="partner col-sm-2">
+                        <img className="" width="100%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo_TV_2015.png/280px-Logo_TV_2015.png"/>
+                    </div>
+                </div>
+            </div>
+            
         </section>
         <Footer/>
         </div>

@@ -1,7 +1,7 @@
 .left-side {
     background-color:#333;
     height: 100vh;
-    background-image: url('https://images.unsplash.com/photo-1501127122-f385ca6ddd9d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=be441e75e87b2016751449c409ddc249&auto=format&fit=crop&w=675&q=80'); 
+    background-image: linear-gradient(  rgba(0, 0, 0, 0.2), rgba(98, 180, 250, 0.5)) ,url('https://images.unsplash.com/photo-1501127122-f385ca6ddd9d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=be441e75e87b2016751449c409ddc249&auto=format&fit=crop&w=675&q=80'); 
     background-size: cover;
     
 }
@@ -9,7 +9,8 @@
 .right-side {
     display: grid;
     place-content: center;
-    /* background-color:#fcfeff */
+    
+    /* background-color:#f7faff; */
 }
 
 /* .form-box {
@@ -25,6 +26,7 @@
 
 .form-title {
     font-size:200px;
+    font-weight: 300;
     
 }
 
@@ -35,9 +37,9 @@
 }
 
 .login_signup_title {
-    font-size:200%;
+    font-size:400%;
     color:#3498db;
-    font-weight: 700;
+    font-weight:300;
 }
 
 /* .login_signup_desc {
@@ -49,5 +51,5 @@
     color:#3498db;
 }
 .form-group {
-    padding:2% 0%;
+    padding:-1% 0%;
 }

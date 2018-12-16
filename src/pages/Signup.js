@@ -15,7 +15,7 @@ class Signup extends React.Component {
             <div className="container-fluid">
                 <div className="row">
                     <div className="left-side col-sm-5">
-                        hello
+                        
                     </div>
                     <div className="right-side col-sm-7">
                         <div className="container">

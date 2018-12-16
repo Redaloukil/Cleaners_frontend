@@ -1,7 +1,7 @@
 import React from 'react';
 import { isEmail , isMobilePhone } from 'validator';
 import { Link } from 'react-router-dom';
-
+import logo from '../../images/cleaners3.png';
 
 class SignupForm extends React.Component {
     constructor(props) {
@@ -48,6 +48,7 @@ class SignupForm extends React.Component {
         const {data , errors , loading } = this.state
         return(
             <form onSubmit={this.onSubmit}>
+                
                 <h2 className="login_signup_title ">Thanks , for your trust !</h2>
                 <br/>
                 <p className="login_signup_desc">Please enter your phone number and password ,you need to enter this informations</p>
