@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { logout } from './../../actions/auth';
 import history from './../../history';
+import './../../styles/right.css';
 
  
 const DashbordNav = () => {
@@ -12,15 +13,19 @@ const DashbordNav = () => {
         }
         return(
             <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="dash-nav">
             
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
+                  <a class="nav-link" href="#">Pricing</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Pricing</a>

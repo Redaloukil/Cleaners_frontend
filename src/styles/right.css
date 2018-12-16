@@ -1,3 +1,14 @@
-#right {
-    
+.navbar-light .bg-light{
+    background-color:white !important;
+    margin: auto;
 }
+
+#dash-nav .navbar-nav{
+    margin: auto;
+}
+#dash-nav .navbar-nav .nav-link{
+    font-weight:400;
+    font-size:120%;
+    padding:30% 4% !important;
+}
+

@@ -8,13 +8,13 @@ import { connect } from 'react-redux';
 
 const Rightbar = () => {
     return(
-            <div className="col-sm-9" id="right">
-                <div className="container">
+            <div className="col-sm-10" id="right">
+                
                 <DashbordNav/>
                 <Profile/>
                 <Statistics/>
                 <Sections/>
-                </div>
+                
             </div>
         )
 }
