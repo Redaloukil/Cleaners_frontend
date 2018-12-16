@@ -1,5 +1,8 @@
 .navbar-light .navbar-nav .nav-link  {
-    color: white;
+    color: #487eb0;
+    font-size:110%;
+    font-weight:500;
+    margin:0 10px;
 }
 
 .navbar-light .navbar-brand {

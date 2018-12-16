@@ -1,22 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import logo from '../../images/cleaners2.png';
+import logo from '../../images/cleaners3.png';
 import '../../styles/navbar.css';
 
 
 const LoginLinks = () => {
     return (
         <ul className="navbar-nav ml-auto">
-                    <li className="nav-item active">
-                        <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/"><i class="fa fa-home" aria-hidden="true"></i> Home<span className="sr-only">(current)</span></Link>
                     </li>
                     
                     <li className="nav-item">
-                        <Link className="nav-link" to="/login">Login</Link>
+                        <Link className="nav-link" to="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/signup">Create an account</Link>
+                        <Link className="nav-link" to="/signup"><i class="fa fa-user-plus" aria-hidden="true"></i> Create an account</Link>
                     </li>
         </ul>
     )
@@ -25,8 +25,10 @@ const LoginLinks = () => {
 const AuthenticatedLinks = () => {
     return(
         <ul className="navbar-nav ml-auto">
-                    <li className="nav-item active">
-                        <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
+                    <li className="nav-item">
+                    
+
+                        <Link className="nav-link" to="/"><i class="fa fa-home" aria-hidden="true"></i> Home <span className="sr-only">(current)</span></Link>
                     </li>
                     
                     <li className="nav-item">

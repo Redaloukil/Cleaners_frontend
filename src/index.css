@@ -26,6 +26,14 @@ code {
 
 button {
   background-color:#62bcfa;
+  border:0px;
+  cursor: pointer;
+  font-size:120%;
+  padding: 10px 20px;
+  margin-right:10px;
+  border-radius:200px;
+  color:white;
+  font-weight:600;
 }
 
 a {
@@ -33,9 +41,7 @@ a {
 }
 
 h1 {
-  font-size:650%;
-  font-weight:400;
-
+  
 }
 
 h2 {
