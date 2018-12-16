@@ -1,5 +1,27 @@
 #left {
+    padding:0px;
     height:100vh;
     background-color:#487eb0;
     box-shadow: 3px 2px 2px rgba(0,0,0,0.1);
+}
+
+#logo {
+    padding:10% 5%;
+}
+.dash-link {
+    font-size:130%;
+    padding:10% 10%;
+    color: white;
+    opacity:0.6;
+    font-weight:400;
+    display: block;
+}
+
+.dash-link:hover {
+    background-color: #103f6b;
+    text-decoration: none;
+    color: white;
+    padding-left:13%;
+    border-left:5px solid #3498db;
+    transition:0.3s;
 }
