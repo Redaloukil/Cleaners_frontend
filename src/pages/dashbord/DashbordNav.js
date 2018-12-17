@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { logout } from './../../actions/auth';
 import history from './../../history';
 import './../../styles/right.css';
-
+import { Link  } from 'react-router-dom';
+import { Button } from 'semantic-ui-react';
  
 const DashbordNav = () => {
         const logoutRequest = () => {
@@ -13,27 +14,26 @@ const DashbordNav = () => {
         }
         return(
             <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="dash-nav">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light" id="dash-nav">
             
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Home</a>
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <Link className="nav-link" to="#"> Home</Link>
                 </li>
                 
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
+                
+                <li className="nav-item">
+                  <Link className="nav-link" to="#"> Pricing</Link>
                 </li>
                 
               </ul>
             </div>
           </nav>
+            <div className="text-right">
+                <Button><Link to="">Create An Order</Link></Button>
+                <Button><Link to="">View The Orders</Link></Button>
+            </div>
             </div>
         )
     
