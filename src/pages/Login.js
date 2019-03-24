@@ -47,8 +47,10 @@ class Login extends React.Component {
     
 }
 
-// function mapStateToProps(state){
-//     error:form.error.login
-// }
+function mapStateToProps(state){
+    return{
+        error: state.error.login
+    }
+}
 
 export default connect(null , {login})(Login);

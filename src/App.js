@@ -13,9 +13,6 @@ import UserRoute from './components/routes/UserRoute';
 
 
 class App extends React.Component {
-  componentWillMount(){
-
-  }
   render() {
     const { isAuthenticated , location } = this.props
     return (

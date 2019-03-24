@@ -19,6 +19,7 @@
     "semantic-ui-react": "^0.83.0",
     "superagent": "^4.0.0-beta.5",
     "superagent-promise": "^1.1.0",
+    "thunk": "0.0.1",
     "validator": "^10.8.0"
   },
   "scripts": {
